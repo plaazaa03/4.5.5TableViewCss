@@ -40,7 +40,6 @@ public class TableViewSample extends Application {
     @Override
     public void start(Stage stage) {
         Scene scene = new Scene(new Group());
-        scene.getStylesheets().add("es/ieslosmontecillos/tableviewcss/TableView.css");
         stage.setTitle("Table View Sample");
         stage.setWidth(450);
         stage.setHeight(550);
@@ -125,6 +124,7 @@ public class TableViewSample extends Application {
         ((Group) scene.getRoot()).getChildren().addAll(vbox);
 
         stage.setScene(scene);
+        stage.getScene().getStylesheets().add(getClass().getResource("TableView.css").toExternalForm());
         stage.show();
     }
 
